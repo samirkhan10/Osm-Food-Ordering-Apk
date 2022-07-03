@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_app"
+        android:icon="@drawable/app_icon_main"
+        android:title="@string/fruitzone"/>
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/search"
+        android:title="@string/search"/>
+
+    <item
+        android:id="@+id/action_wallet"
+        android:icon="@drawable/wallet_round"
+        android:title="@string/wallet"/>
+
+    <item
+        android:id="@+id/action_referal"
+        android:icon="@drawable/ic_refer"
+        android:title="@string/referral"/>
+
+    <item
+        android:id="@+id/action_account"
+        android:icon="@drawable/ic_profile"
+        android:title="Account"/>
+</menu>

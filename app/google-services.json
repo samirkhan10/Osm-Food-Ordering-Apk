@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "339042804801",
+    "project_id": "fruits-zone-customer-app",
+    "storage_bucket": "fruits-zone-customer-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339042804801:android:155000225205418fd912c0",
+        "android_client_info": {
+          "package_name": "com.fruitszone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339042804801-aa2bnqa5md37j6ecq04be8ng66tv7pom.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHQ3Rc9OmnBW6Dbq_KRI9_-SMu2Qnd1mg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339042804801-aa2bnqa5md37j6ecq04be8ng66tv7pom.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

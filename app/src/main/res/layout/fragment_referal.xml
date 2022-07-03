@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/referalFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ReferalFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_actionbar"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:text="@string/invite_your_friends_to_fruit_zone_and_get_a_chance_to_earn_to_2000"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:src="@drawable/ic_refer1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="left"
+                        android:padding="2dp"
+                        android:text="@string/you_will_earn_50_discount_when_they_make_their_first_purchase_t_cs_apply"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="left"
+                            android:padding="2dp"
+                            android:text="Your referral code :"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_code"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <TextView
+                                android:id="@+id/txt_code"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingStart="5dp"
+                                android:text="WXTRYFDHJ" />
+
+
+                            <TextView
+                                android:id="@+id/txt_copy"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Copy"
+                                android:textColor="@color/colorBalck"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp">
+
+
+                <TextView
+                    android:id="@+id/see_offer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_see_offer"
+                    android:gravity="left"
+                    android:padding="4dp"
+                    android:text="See Offer"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/invite_whatsapp"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_add"
+                    android:drawableRight="@drawable/whatsapp"
+                    android:padding="6dp"
+                    android:textAlignment="center"
+                    android:text="Invite via Whatsapp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|center_vertical"
+            android:orientation="vertical">
+
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:padding="10dp">-->
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="24dp"-->
+            <!--                    android:layout_height="24dp"-->
+            <!--                    android:background="@drawable/circale_green"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:text="1"-->
+            <!--                    android:textColor="@color/colorWhite" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/txt_t1"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginLeft="5dp"-->
+            <!--                    android:text="Share your referal code"-->
+            <!--                    android:textColor="@color/colorBalck"-->
+            <!--                    android:textStyle="bold" />-->
+            <!--            </LinearLayout>-->
+
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="5dp" />-->
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:padding="10dp">-->
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="24dp"-->
+            <!--                    android:layout_height="24dp"-->
+            <!--                    android:background="@drawable/circale_green"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:text="2"-->
+            <!--                    android:textColor="@color/colorWhite" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/txt_t2"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginLeft="5dp"-->
+            <!--                    android:text="Share your referal code"-->
+            <!--                    android:textColor="@color/colorBalck"-->
+            <!--                    android:textStyle="bold" />-->
+            <!--            </LinearLayout>-->
+
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="5dp" />-->
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:padding="10dp">-->
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="24dp"-->
+            <!--                    android:layout_height="24dp"-->
+            <!--                    android:background="@drawable/circale_green"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:text="3"-->
+            <!--                    android:textColor="@color/colorWhite" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/txt_t3"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginLeft="5dp"-->
+            <!--                    android:text="Share your referal code"-->
+            <!--                    android:textColor="@color/colorBalck"-->
+            <!--                    android:textStyle="bold" />-->
+            <!--            </LinearLayout>-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="220dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:background="@drawable/rounded_code"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                android:padding="10dp">-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/txt_code"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:text="WXTRYFDHJ" />-->
+
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/txt_copy"-->
+            <!--                    android:layout_width="50dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:text="Copy"-->
+            <!--                    android:textColor="@color/colorBalck"-->
+            <!--                    android:textStyle="bold" />-->
+            <!--            </LinearLayout>-->
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/gift" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Share and get ₹ 50 off"
+                android:textColor="@color/colorBalck"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_green2"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:id="@+id/txt_share"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_share"
+                    android:gravity="center"
+                    android:text="Invite friends now"
+                    android:textColor="@color/colorBalck"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

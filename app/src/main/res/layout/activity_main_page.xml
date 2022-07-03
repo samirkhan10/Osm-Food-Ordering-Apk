@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/rounded_actionbar"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txt_actiontitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:maxLength="12"
+                    android:padding="5dp"
+                    android:text="BUTCHERY"
+                    android:textColor="@color/colorBalck"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/rlt_noti"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/img_noti"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_notification" />
+
+                    <TextView
+                        android:id="@+id/txt_noti"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/circale_card"
+                        android:gravity="center"
+                        android:padding="0dp"
+                        android:text="1"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="10dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlt_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/img_cart"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_cart" />
+
+                    <TextView
+                        android:id="@+id/txt_countcard"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/circale_card"
+                        android:gravity="center"
+                        android:padding="0dp"
+                        android:text="10"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+<!--    <ScrollView-->
+<!--        android:id="@+id/root"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scrollbars="none"-->
+<!--        android:layout_above="@+id/bottom_navigation"-->
+<!--        android:layout_below="@id/appBarLayout"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/hidden_panel"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">-->
+    <FrameLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+<!--   // </ScrollView>-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hidden_panel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.6"
+        android:layout_below="@+id/rootLayout"
+        android:background="@drawable/home_hidden_search"
+        android:elevation="20dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txt_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:text="Search Location"
+            android:textColor="@color/colorBalck"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_close_lay"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:src="@drawable/close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/lvl_actionsearch"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_search"
+            android:elevation="5dp"
+            android:gravity="center|right"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txt_location"
+            app:layout_constraintTop_toBottomOf="@+id/txt_location">
+
+            <ImageView
+                android:id="@+id/loc_img_search"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="13dp"
+                android:src="@drawable/ic_search" />
+
+            <EditText
+                android:id="@+id/loc_search"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:gravity="left|center"
+                android:hint="Search for area,landmark"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:textColor="@color/colorGrey1"
+                android:textColorHint="@color/colorGrey1" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_loca"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_baseline_location_on_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lvl_actionsearch" />
+
+        <ImageView
+            android:id="@+id/img_add"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_baseline_add_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_loca" />
+
+        <TextView
+            android:id="@+id/txt_uselocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:text="Use Current Location"
+            android:textColor="#3192A2"
+            android:textSize="24dp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/img_loca"
+            app:layout_constraintStart_toEndOf="@+id/img_loca"
+            app:layout_constraintTop_toTopOf="@+id/img_loca" />
+
+        <TextView
+            android:id="@+id/txt_addlocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:text="Add address"
+            android:textColor="#3192A2"
+            android:textSize="24dp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/img_add"
+            app:layout_constraintStart_toEndOf="@+id/img_add"
+            app:layout_constraintTop_toTopOf="@+id/img_add" />
+
+        <TextView
+            android:id="@+id/savedAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:text="Saved Addresses"
+            android:textColor="@android:color/black"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_add" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="15dp"
+        android:onClick="valet"
+        android:orientation="vertical"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rootLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rootLayout">
+
+        <ImageView
+            android:id="@+id/image_valet"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/home_ad" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/text_valet"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:padding="6dp"-->
+        <!--            android:text="Valet"-->
+        <!--            android:textAlignment="center" />-->
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:id="@+id/bottom_navigation"
+        app:layout_constraintBottom_toBottomOf="@+id/hidden_panel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="fruitZone"
+            android:orientation="vertical"
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageFruit"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/fr_zone" />
+
+            <TextView
+                android:id="@+id/textFruit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:text="FruitZone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="search"
+            android:orientation="vertical"
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/text_valet"
+            app:layout_constraintStart_toEndOf="@id/linearLayout6"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/image_search"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/search_icon" />
+
+            <TextView
+                android:id="@+id/text_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="6dp"
+                android:text="Search"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/text_valet"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="4dp"
+            android:padding="6dp"
+            android:text="Valet"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout9"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout3" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="referral"
+            android:orientation="vertical"
+            android:padding="4dp"
+            app:layout_constraintStart_toEndOf="@+id/text_valet"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout8"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/image_referral"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+
+                android:layout_marginTop="4dp"
+                android:background="@drawable/referal" />
+
+            <TextView
+                android:id="@+id/text_referral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="6dp"
+                android:text="Referral"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="account"
+            android:orientation="vertical"
+            android:padding="4dp"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/image_account"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/save_as" />
+
+            <TextView
+                android:id="@+id/text_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="6dp"
+                android:text="Account"
+                android:textAlignment="center" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/bottom_navigation"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:background="@color/colorPrimary"-->
+<!--        app:itemTextColor="@drawable/bottom_nav_icon_color_selector"-->
+<!--        app:itemIconTint="@drawable/bottom_nav_icon_color_selector"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:menu="@menu/bottom_navigation" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Fruits Zone</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="sing">Sign Up</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="spinner_title">Select Area</string>
+
+    <string name="pic_myslf">Pickup Myself</string>
+
+    <string name="fruitzone">FruitZone</string>
+    <string name="search">search</string>
+    <string name="wallet">Wallet</string>
+    <string name="referral">Referral</string>
+    <string name="you_will_earn_50_discount_when_they_make_their_first_purchase_t_cs_apply"><![CDATA[You will earn ₹ 50 discount when they make their first purchase. T&Cs apply.]]></string>
+    <string name="invite_your_friends_to_fruit_zone_and_get_a_chance_to_earn_to_2000">Invite your friends to Fruit Zone and get a chance to earn to ₹ 2000</string>
+    <string name="tiitle_main_page">MainPageActivity</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+</resources>

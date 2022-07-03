@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/walletFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.WalletFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.7">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:background="@drawable/wallet_upper"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_wallet" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="1dp"
+                            android:text="My Wallet"
+                            android:textSize="24dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_wallet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="₹1000"
+                            android:textColor="@color/colorBalck"
+                            android:textSize="24dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                   android:weightSum="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="Refill Balance"
+                                android:textSize="18dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.2"
+                                    android:gravity="center|left"
+                                    android:padding="2dp"
+                                    android:text="Refill Amount:"
+                                    android:textColor="@color/colorBalck"
+                                    android:textSize="18dp" />
+
+                                <View
+                                    android:layout_width="10dp"
+                                    android:layout_height="1dp" />
+
+                                <EditText
+                                    android:id="@+id/ed_amount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_editetext"
+                                    android:inputType="number"
+                                    android:padding="12dp"
+                                    android:textColor="@color/colorGrey2"
+                                    android:textColorHint="@color/colorGrey" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|left"
+                                android:padding="5dp"
+                                android:text="Payment Method:"
+                                android:textColor="@color/colorBalck"
+                                android:textSize="18dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/rounded_editetext"
+                                android:padding="5dp">
+
+                                <Spinner
+                                    android:id="@+id/spinner1"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="32dp"
+                                    android:prompt="@string/spinner_title" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp" />
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Plans"
+                    android:textColor="@color/colorBalck"
+                    android:textSize="18dp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/oneMonth"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                   android:layout_margin="10dp"
+                        app:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:id="@+id/oneMonthLay"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:background="@drawable/plain_card_empty"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:id="@+id/oneMonthImg"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="right"
+                                android:src="@drawable/circle" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_marginTop="10dp"
+                                android:text="1 Month"
+                                android:textColor="@color/colorBalck"
+                                android:textSize="18dp" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="- Budget Plain -"
+                                android:textColor="@color/colorBalck"
+                                android:textSize="14dp" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:layout_marginTop="10dp"
+                                android:text="> Free Delivery for 30 days"
+                                android:textColor="#494A4A"
+                                android:textSize="12dp" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:padding="5dp"
+                                android:layout_marginTop="10dp"
+                                android:text="₹ 69"
+                                android:textColor="#494A4A"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/threeMonth"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/threeMonthLay"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:background="@drawable/plain_card"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:id="@+id/threeMonthImg"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="right"
+                                android:src="@drawable/ic_baseline_check_circle_24" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_marginTop="10dp"
+                                android:text="3 Month"
+                                android:textColor="@color/colorBalck"
+                                android:textSize="18dp" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="- Value Plain -"
+                                android:textColor="@color/colorBalck"
+                                android:textSize="14dp" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:layout_marginTop="10dp"
+                                android:text="> Free Delivery for 90 days"
+                                android:textColor="#494A4A"
+                                android:textSize="12dp" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:padding="5dp"
+                                android:layout_marginTop="10dp"
+                                android:text="₹ 129"
+                                android:textColor="#494A4A"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Payment Method:"
+                    android:textColor="@color/colorBalck"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_editetext"
+                    android:padding="5dp">
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="32dp"
+                        android:prompt="@string/spinner_title" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/wallet_lower"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:layout_marginBottom="30dp"
+
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_green2"
+            android:elevation="15dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_green2"
+                android:layout_weight="3">
+                <TextView
+                    android:id="@+id/txt_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingStart="10dp"
+                    android:gravity="center"
+                    android:text="3 month"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/txt_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="₹ 129"
+                    android:padding="12dp"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorGrey" />
+
+                <TextView
+                    android:id="@+id/txt_pay"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center|right"
+                    android:text="Pay Now"
+                    android:paddingEnd="15dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
